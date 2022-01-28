@@ -17,12 +17,6 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
         tableViewLabel.delegate = self
         tableViewLabel.dataSource = self
 
-        NotificationCenter.default.addObserver(self, selector: #selector(self.refreshData(notification:)), name: Notification.Name("RefreshNotificationIdentifier"), object: nil)
-        
-    }
-    
-    @objc func refreshData(notification: Notification) {
-        tableViewLabel.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
